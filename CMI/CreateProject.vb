@@ -1,4 +1,5 @@
 ﻿Public Class CreateProject
+    Public DevelopForMCVer As Integer = 0
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then ' Check if the User wants to select an Mod name later
             TextBox2.Enabled = False
@@ -20,5 +21,21 @@
         If CheckBox1.Checked = True Then
             ' todo
         End If
+
+        Select Case RadioButton1.Checked And RadioButton2.Checked
+            Case RadioButton1.Checked
+
+                DevelopForMCVer = 1
+
+            Case RadioButton2.Checked
+
+                DevelopForMCVer = 2
+
+        End Select
+
+    End Sub
+
+    Private Sub CreateProject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
