@@ -1,15 +1,30 @@
-﻿Public Class ProjectCreator
-    Private Sub ProjectCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        bgw1.RunWorkerAsync()
-    End Sub
+﻿Imports System.IO
+Imports System.Text
 
-    Private Sub bgw1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles bgw1.DoWork
+Public Class ProjectCreator
+    Private Sub ProjectCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Create project directories
-        Dim dw As New IOClass.DirWriter
-        dw.CreateDir("C:\Craftbyte Mod IDE\Projects\", CreateProject.TextBox1.Text)
+        IO.Directory.CreateDirectory("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\")
 
         ' Create Project info files
-        Dim fw As New IOClass.FileWriter
-        fw.CreateFile("C:\Craftbyte Mod IDE\Projects\" & CreateProject.TextBox1.Text & "\", CreateProject.TextBox1.Text & "-cmi-prj.cps", "CMI Project solution file" & Environment.NewLine & "-CreatedOn:" & TimeOfDay & Environment.NewLine & "PrjName:" & CreateProject.TextBox1.Text & Environment.NewLine & "ModName:" & CreateProject.TextBox2.Text & Environment.NewLine & "DevelopForMCVer:" & CreateProject.DevelopForMCVer & "    # 1 means for 1.7.10 and 2 means for 1.8")
+        Writer()
+    End Sub
+
+    Private Async Sub Writer()
+
+        Dim prjPath As String = "C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\"
+
+        Dim sb As StringBuilder = New StringBuilder()
+        sb.AppendLine("CMI Project solution file")
+        sb.AppendLine("-CreatedOn:" & TimeOfDay)
+        sb.AppendLine("PrjName:" & CreateProject.PrjName)
+        sb.AppendLine("ModName:" & CreateProject.ModName)
+        sb.AppendLine("DevelopForMCVer:" & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
+
+        Using outfile As StreamWriter = New StreamWriter(prjPath + "\" & CreateProject.ModName & ".cps", True)
+            Await outfile.WriteAsync(sb.ToString())
+        End Using
+
+
     End Sub
 End Class

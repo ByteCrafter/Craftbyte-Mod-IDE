@@ -1,5 +1,8 @@
 ﻿Public Class CreateProject
     Public DevelopForMCVer As Integer = 0
+    Public ModName As String
+    Public PrjName As String
+
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then ' Check if the User wants to select an Mod name later
             TextBox2.Enabled = False
@@ -22,17 +25,16 @@
             ' todo
         End If
 
-        Select Case RadioButton1.Checked And RadioButton2.Checked
-            Case RadioButton1.Checked
+        If RadioButton1.Checked = True Then
+            DevelopForMCVer = 1
+        ElseIf RadioButton2.Checked = True Then
+            DevelopForMCVer = 2
+        End If
 
-                DevelopForMCVer = 1
+        ModName = TextBox2.Text
+        PrjName = TextBox1.Text
 
-            Case RadioButton2.Checked
-
-                DevelopForMCVer = 2
-
-        End Select
-
+        ProjectCreator.Show()
     End Sub
 
     Private Sub CreateProject_Load(sender As Object, e As EventArgs) Handles MyBase.Load

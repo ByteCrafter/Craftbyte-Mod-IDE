@@ -77,7 +77,6 @@
     <Compile Include="CreateProject.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IOClass.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +98,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OpenProject.Designer.vb">
+      <DependentUpon>OpenProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OpenProject.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProjectCreator.Designer.vb">
       <DependentUpon>ProjectCreator.vb</DependentUpon>
@@ -125,6 +130,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenProject.resx">
+      <DependentUpon>OpenProject.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectCreator.resx">
       <DependentUpon>ProjectCreator.vb</DependentUpon>
