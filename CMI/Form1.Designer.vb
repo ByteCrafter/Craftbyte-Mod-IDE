@@ -23,27 +23,15 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.ProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SearchReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CompileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.NewProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoadProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,8 +39,20 @@ Partial Class Form1
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchForToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchAndReplaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -66,6 +66,148 @@ Partial Class Form1
         Me.MenuStrip1.Size = New System.Drawing.Size(905, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ProjectToolStripMenuItem
+        '
+        Me.ProjectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.SaveProjectToolStripMenuItem})
+        Me.ProjectToolStripMenuItem.Name = "ProjectToolStripMenuItem"
+        Me.ProjectToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.ProjectToolStripMenuItem.Text = "Project"
+        '
+        'NewProjectToolStripMenuItem
+        '
+        Me.NewProjectToolStripMenuItem.Name = "NewProjectToolStripMenuItem"
+        Me.NewProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewProjectToolStripMenuItem.Text = "New Project"
+        '
+        'LoadProjectToolStripMenuItem
+        '
+        Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
+        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoadProjectToolStripMenuItem.Text = "Load Project"
+        '
+        'SaveProjectToolStripMenuItem
+        '
+        Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
+        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveProjectToolStripMenuItem.Text = "Save Project"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewFileToolStripMenuItem, Me.OpenFileToolStripMenuItem, Me.SaveFileToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'NewFileToolStripMenuItem
+        '
+        Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.NewFileToolStripMenuItem.Text = "New File"
+        '
+        'OpenFileToolStripMenuItem
+        '
+        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.OpenFileToolStripMenuItem.Text = "Open File"
+        '
+        'SaveFileToolStripMenuItem
+        '
+        Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.SaveFileToolStripMenuItem.Text = "Save File"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.CutToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'UndoToolStripMenuItem
+        '
+        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.UndoToolStripMenuItem.Text = "Undo"
+        '
+        'RedoToolStripMenuItem
+        '
+        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.RedoToolStripMenuItem.Text = "Redo"
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
+        '
+        'CutToolStripMenuItem
+        '
+        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.CutToolStripMenuItem.Text = "Cut"
+        '
+        'SelectAllToolStripMenuItem
+        '
+        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.SelectAllToolStripMenuItem.Text = "Select all"
+        '
+        'DeselectAllToolStripMenuItem
+        '
+        Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
+        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.DeselectAllToolStripMenuItem.Text = "Deselect all"
+        '
+        'SearchReplaceToolStripMenuItem
+        '
+        Me.SearchReplaceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchForToolStripMenuItem, Me.SearchAndReplaceToolStripMenuItem})
+        Me.SearchReplaceToolStripMenuItem.Name = "SearchReplaceToolStripMenuItem"
+        Me.SearchReplaceToolStripMenuItem.Size = New System.Drawing.Size(111, 20)
+        Me.SearchReplaceToolStripMenuItem.Text = "Search && Replace"
+        '
+        'SearchForToolStripMenuItem
+        '
+        Me.SearchForToolStripMenuItem.Name = "SearchForToolStripMenuItem"
+        Me.SearchForToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SearchForToolStripMenuItem.Text = "Search for"
+        '
+        'SearchAndReplaceToolStripMenuItem
+        '
+        Me.SearchAndReplaceToolStripMenuItem.Name = "SearchAndReplaceToolStripMenuItem"
+        Me.SearchAndReplaceToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SearchAndReplaceToolStripMenuItem.Text = "Search and Replace"
+        '
+        'ModToolStripMenuItem
+        '
+        Me.ModToolStripMenuItem.Name = "ModToolStripMenuItem"
+        Me.ModToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ModToolStripMenuItem.Text = "Mod"
+        '
+        'MinecraftToolStripMenuItem
+        '
+        Me.MinecraftToolStripMenuItem.Name = "MinecraftToolStripMenuItem"
+        Me.MinecraftToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.MinecraftToolStripMenuItem.Text = "Minecraft"
+        '
+        'CompileToolStripMenuItem
+        '
+        Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
+        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.CompileToolStripMenuItem.Text = "Compile"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
         '
         'StatusStrip1
         '
@@ -96,6 +238,26 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project && File"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(6, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 17)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "%prjName%"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Label1.Location = New System.Drawing.Point(6, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(112, 18)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Current Project:"
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.RichTextBox1)
@@ -113,168 +275,6 @@ Partial Class Form1
         Me.RichTextBox1.Size = New System.Drawing.Size(693, 472)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
-        '
-        'ProjectToolStripMenuItem
-        '
-        Me.ProjectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.SaveProjectToolStripMenuItem})
-        Me.ProjectToolStripMenuItem.Name = "ProjectToolStripMenuItem"
-        Me.ProjectToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
-        Me.ProjectToolStripMenuItem.Text = "Project"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewFileToolStripMenuItem, Me.OpenFileToolStripMenuItem, Me.SaveFileToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.CutToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
-        'SearchReplaceToolStripMenuItem
-        '
-        Me.SearchReplaceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchForToolStripMenuItem, Me.SearchAndReplaceToolStripMenuItem})
-        Me.SearchReplaceToolStripMenuItem.Name = "SearchReplaceToolStripMenuItem"
-        Me.SearchReplaceToolStripMenuItem.Size = New System.Drawing.Size(111, 20)
-        Me.SearchReplaceToolStripMenuItem.Text = "Search && Replace"
-        '
-        'ModToolStripMenuItem
-        '
-        Me.ModToolStripMenuItem.Name = "ModToolStripMenuItem"
-        Me.ModToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ModToolStripMenuItem.Text = "Mod"
-        '
-        'MinecraftToolStripMenuItem
-        '
-        Me.MinecraftToolStripMenuItem.Name = "MinecraftToolStripMenuItem"
-        Me.MinecraftToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.MinecraftToolStripMenuItem.Text = "Minecraft"
-        '
-        'CompileToolStripMenuItem
-        '
-        Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
-        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.CompileToolStripMenuItem.Text = "Compile"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label1.Location = New System.Drawing.Point(6, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Current Project:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(6, 34)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "%prjName%"
-        '
-        'NewProjectToolStripMenuItem
-        '
-        Me.NewProjectToolStripMenuItem.Name = "NewProjectToolStripMenuItem"
-        Me.NewProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NewProjectToolStripMenuItem.Text = "New Project"
-        '
-        'LoadProjectToolStripMenuItem
-        '
-        Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
-        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.LoadProjectToolStripMenuItem.Text = "Load Project"
-        '
-        'NewFileToolStripMenuItem
-        '
-        Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NewFileToolStripMenuItem.Text = "New File"
-        '
-        'OpenFileToolStripMenuItem
-        '
-        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
-        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.OpenFileToolStripMenuItem.Text = "Open File"
-        '
-        'SaveFileToolStripMenuItem
-        '
-        Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SaveFileToolStripMenuItem.Text = "Save File"
-        '
-        'SaveProjectToolStripMenuItem
-        '
-        Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
-        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SaveProjectToolStripMenuItem.Text = "Save Project"
-        '
-        'UndoToolStripMenuItem
-        '
-        Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UndoToolStripMenuItem.Text = "Undo"
-        '
-        'RedoToolStripMenuItem
-        '
-        Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RedoToolStripMenuItem.Text = "Redo"
-        '
-        'CopyToolStripMenuItem
-        '
-        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CopyToolStripMenuItem.Text = "Copy"
-        '
-        'PasteToolStripMenuItem
-        '
-        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PasteToolStripMenuItem.Text = "Paste"
-        '
-        'CutToolStripMenuItem
-        '
-        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CutToolStripMenuItem.Text = "Cut"
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SelectAllToolStripMenuItem.Text = "Select all"
-        '
-        'DeselectAllToolStripMenuItem
-        '
-        Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DeselectAllToolStripMenuItem.Text = "Deselect all"
-        '
-        'SearchForToolStripMenuItem
-        '
-        Me.SearchForToolStripMenuItem.Name = "SearchForToolStripMenuItem"
-        Me.SearchForToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
-        Me.SearchForToolStripMenuItem.Text = "Search for"
-        '
-        'SearchAndReplaceToolStripMenuItem
-        '
-        Me.SearchAndReplaceToolStripMenuItem.Name = "SearchAndReplaceToolStripMenuItem"
-        Me.SearchAndReplaceToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
-        Me.SearchAndReplaceToolStripMenuItem.Text = "Search and Replace"
         '
         'Form1
         '
