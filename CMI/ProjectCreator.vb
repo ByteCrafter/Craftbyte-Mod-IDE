@@ -7,10 +7,10 @@ Public Class ProjectCreator
         IO.Directory.CreateDirectory("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\")
 
         ' Create Project info files
-        Writer()
+        PrjSolutionFileWriter()
     End Sub
 
-    Private Async Sub Writer()
+    Private Async Sub PrjSolutionFileWriter()
 
         Dim prjPath As String = "C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\"
 
@@ -25,6 +25,18 @@ Public Class ProjectCreator
             Await outfile.WriteAsync(sb.ToString())
         End Using
 
-
+        CreateDirectories()
     End Sub
+
+    Private Sub CreateDirectories()
+        Dim path As String = "C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\"
+        IO.Directory.CreateDirectory(path & "Files")
+        IO.Directory.CreateDirectory(path & "Mod")
+        IO.Directory.CreateDirectory(path & "Workspace")
+
+        Me.Close()
+
+        Form1.Show()
+    End Sub
+
 End Class

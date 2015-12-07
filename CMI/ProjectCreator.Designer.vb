@@ -36,6 +36,7 @@ Partial Class ProjectCreator
         Me.Label1.Size = New System.Drawing.Size(207, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Creating Project, please wait..."
+        Me.Label1.UseWaitCursor = True
         '
         'ProgressBar1
         '
@@ -45,6 +46,7 @@ Partial Class ProjectCreator
         Me.ProgressBar1.Size = New System.Drawing.Size(289, 13)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.ProgressBar1.TabIndex = 1
+        Me.ProgressBar1.UseWaitCursor = True
         '
         'bgw1
         '
@@ -57,8 +59,12 @@ Partial Class ProjectCreator
         Me.ClientSize = New System.Drawing.Size(402, 96)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ProjectCreator"
-        Me.Text = "ProjectCreator"
+        Me.Text = "Creating Project..."
+        Me.UseWaitCursor = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

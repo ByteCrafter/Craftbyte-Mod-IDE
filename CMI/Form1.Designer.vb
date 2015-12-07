@@ -53,7 +53,16 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ProjectInformationsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForNewVersionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WEBSITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -69,7 +78,7 @@ Partial Class Form1
         '
         'ProjectToolStripMenuItem
         '
-        Me.ProjectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.SaveProjectToolStripMenuItem})
+        Me.ProjectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.LoadProjectToolStripMenuItem, Me.SaveProjectToolStripMenuItem, Me.ToolStripSeparator1, Me.ProjectInformationsToolStripMenuItem, Me.ProjectSettingsToolStripMenuItem})
         Me.ProjectToolStripMenuItem.Name = "ProjectToolStripMenuItem"
         Me.ProjectToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.ProjectToolStripMenuItem.Text = "Project"
@@ -77,19 +86,19 @@ Partial Class Form1
         'NewProjectToolStripMenuItem
         '
         Me.NewProjectToolStripMenuItem.Name = "NewProjectToolStripMenuItem"
-        Me.NewProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
         Me.NewProjectToolStripMenuItem.Text = "New Project"
         '
         'LoadProjectToolStripMenuItem
         '
         Me.LoadProjectToolStripMenuItem.Name = "LoadProjectToolStripMenuItem"
-        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoadProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
         Me.LoadProjectToolStripMenuItem.Text = "Load Project"
         '
         'SaveProjectToolStripMenuItem
         '
         Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
-        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
         Me.SaveProjectToolStripMenuItem.Text = "Save Project"
         '
         'FileToolStripMenuItem
@@ -102,7 +111,7 @@ Partial Class Form1
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'OpenFileToolStripMenuItem
@@ -114,7 +123,7 @@ Partial Class Form1
         'SaveFileToolStripMenuItem
         '
         Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.SaveFileToolStripMenuItem.Text = "Save File"
         '
         'EditToolStripMenuItem
@@ -205,12 +214,14 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.CheckForNewVersionsToolStripMenuItem, Me.WEBSITEToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 521)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(905, 22)
@@ -277,6 +288,52 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        '
+        'ProjectInformationsToolStripMenuItem
+        '
+        Me.ProjectInformationsToolStripMenuItem.Name = "ProjectInformationsToolStripMenuItem"
+        Me.ProjectInformationsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ProjectInformationsToolStripMenuItem.Text = "Project Informations"
+        '
+        'ProjectSettingsToolStripMenuItem
+        '
+        Me.ProjectSettingsToolStripMenuItem.Name = "ProjectSettingsToolStripMenuItem"
+        Me.ProjectSettingsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ProjectSettingsToolStripMenuItem.Text = "Project Settings"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 17)
+        Me.ToolStripStatusLabel1.Text = "%statusLabel%"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'CheckForNewVersionsToolStripMenuItem
+        '
+        Me.CheckForNewVersionsToolStripMenuItem.Name = "CheckForNewVersionsToolStripMenuItem"
+        Me.CheckForNewVersionsToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.CheckForNewVersionsToolStripMenuItem.Text = "Check for new Versions"
+        '
+        'WEBSITEToolStripMenuItem
+        '
+        Me.WEBSITEToolStripMenuItem.Name = "WEBSITEToolStripMenuItem"
+        Me.WEBSITEToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.WEBSITEToolStripMenuItem.Text = "Website"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,6 +349,8 @@ Partial Class Form1
         Me.Text = "Craftbyte Mod IDE - %prjName%"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -331,4 +390,12 @@ Partial Class Form1
     Friend WithEvents DeselectAllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchForToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchAndReplaceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ProjectInformationsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProjectSettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckForNewVersionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WEBSITEToolStripMenuItem As ToolStripMenuItem
 End Class
