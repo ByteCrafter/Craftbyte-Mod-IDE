@@ -123,7 +123,7 @@ Partial Class Form1
         'SaveFileToolStripMenuItem
         '
         Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveFileToolStripMenuItem.Text = "Save File"
         '
         'EditToolStripMenuItem

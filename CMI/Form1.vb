@@ -1,4 +1,7 @@
-﻿Public Class Form1
+﻿Imports System.IO
+Imports System.Text
+
+Public Class Form1
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
@@ -14,7 +17,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.Text = "Craftbyte Mod IDE - " & CreateProject.PrjName
 
         ToolStripProgressBar1.Style = ProgressBarStyle.Marquee
         ToolStripStatusLabel1.Text = "Creating files, options and more. You can use all full functions of the IDE after this task has finished!"
@@ -49,6 +52,24 @@
         End If
 
 
+
+    End Sub
+
+    Private Sub SaveFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveFileToolStripMenuItem.Click
+        Dim sfd As New SaveFileDialog
+        If sfd.ShowDialog = DialogResult.OK Then
+            PrjSolutionFileWriter(sfd.FileName)
+        End If
+    End Sub
+
+    Private Async Sub PrjSolutionFileWriter(filename As String)
+
+        Dim sb As StringBuilder = New StringBuilder()
+        sb.Append(RichTextBox1.Text)
+
+        Using outfile As StreamWriter = New StreamWriter(filename + ".java", True)
+            Await outfile.WriteAsync(sb.ToString())
+        End Using
 
     End Sub
 End Class
