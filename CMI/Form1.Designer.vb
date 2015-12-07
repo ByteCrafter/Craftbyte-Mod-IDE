@@ -111,7 +111,7 @@ Partial Class Form1
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'OpenFileToolStripMenuItem
