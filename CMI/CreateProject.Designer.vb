@@ -90,6 +90,7 @@ Partial Class CreateProject
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(106, 102)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(55, 17)
@@ -101,11 +102,11 @@ Partial Class CreateProject
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Enabled = False
         Me.RadioButton2.Location = New System.Drawing.Point(167, 102)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(40, 17)
         Me.RadioButton2.TabIndex = 8
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "1.8"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '

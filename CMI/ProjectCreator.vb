@@ -16,10 +16,10 @@ Public Class ProjectCreator
 
         Dim sb As StringBuilder = New StringBuilder()
         sb.AppendLine("CMI Project solution file")
-        sb.AppendLine("-CreatedOn:" & TimeOfDay)
-        sb.AppendLine("PrjName:" & CreateProject.PrjName)
-        sb.AppendLine("ModName:" & CreateProject.ModName)
-        sb.AppendLine("DevelopForMCVer:" & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
+        sb.AppendLine("-CreatedOn: " & TimeOfDay)
+        sb.AppendLine(CreateProject.PrjName)
+        sb.AppendLine(CreateProject.ModName)
+        sb.AppendLine("DevelopForMCVer: " & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
 
         Using outfile As StreamWriter = New StreamWriter(prjPath + "\" & CreateProject.ModName & ".cps", True)
             Await outfile.WriteAsync(sb.ToString())

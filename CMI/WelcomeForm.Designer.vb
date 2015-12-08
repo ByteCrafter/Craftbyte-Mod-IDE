@@ -145,11 +145,11 @@ Partial Class WelcomeForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label2.Location = New System.Drawing.Point(131, 426)
+        Me.Label2.Location = New System.Drawing.Point(58, 426)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 20)
+        Me.Label2.Size = New System.Drawing.Size(262, 20)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "version 0.0.0.1"
+        Me.Label2.Text = "version PREVIEW-prealpha0.0.0.1"
         '
         'PictureBox1
         '

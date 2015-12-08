@@ -22,11 +22,15 @@ Partial Class Form1
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.components = New System.ComponentModel.Container()
+        Me.mainIDEStr = New System.Windows.Forms.MenuStrip()
         Me.ProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoadProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveProjectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ProjectInformationsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,35 +50,35 @@ Partial Class Form1
         Me.MinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForNewVersionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WEBSITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ideStatStr1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ProjectInformationsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProjectSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForNewVersionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WEBSITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.mainIDEStr.SuspendLayout()
+        Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'mainIDEStr
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProjectToolStripMenuItem, Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.SearchReplaceToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(905, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.mainIDEStr.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProjectToolStripMenuItem, Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.SearchReplaceToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.mainIDEStr.Location = New System.Drawing.Point(0, 0)
+        Me.mainIDEStr.Name = "mainIDEStr"
+        Me.mainIDEStr.Size = New System.Drawing.Size(905, 24)
+        Me.mainIDEStr.TabIndex = 0
+        Me.mainIDEStr.Text = "MenuStrip1"
         '
         'ProjectToolStripMenuItem
         '
@@ -100,6 +104,23 @@ Partial Class Form1
         Me.SaveProjectToolStripMenuItem.Name = "SaveProjectToolStripMenuItem"
         Me.SaveProjectToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
         Me.SaveProjectToolStripMenuItem.Text = "Save Project"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        '
+        'ProjectInformationsToolStripMenuItem
+        '
+        Me.ProjectInformationsToolStripMenuItem.Name = "ProjectInformationsToolStripMenuItem"
+        Me.ProjectInformationsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ProjectInformationsToolStripMenuItem.Text = "Project Informations"
+        '
+        'ProjectSettingsToolStripMenuItem
+        '
+        Me.ProjectSettingsToolStripMenuItem.Name = "ProjectSettingsToolStripMenuItem"
+        Me.ProjectSettingsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ProjectSettingsToolStripMenuItem.Text = "Project Settings"
         '
         'FileToolStripMenuItem
         '
@@ -219,26 +240,57 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'StatusStrip1
+        'AboutToolStripMenuItem
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 521)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(905, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
-        'ToolStrip1
+        'CheckForNewVersionsToolStripMenuItem
         '
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(905, 25)
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.CheckForNewVersionsToolStripMenuItem.Name = "CheckForNewVersionsToolStripMenuItem"
+        Me.CheckForNewVersionsToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.CheckForNewVersionsToolStripMenuItem.Text = "Check for new Versions"
+        '
+        'WEBSITEToolStripMenuItem
+        '
+        Me.WEBSITEToolStripMenuItem.Name = "WEBSITEToolStripMenuItem"
+        Me.WEBSITEToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
+        Me.WEBSITEToolStripMenuItem.Text = "Website"
+        '
+        'ideStatStr1
+        '
+        Me.ideStatStr1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
+        Me.ideStatStr1.Location = New System.Drawing.Point(0, 521)
+        Me.ideStatStr1.Name = "ideStatStr1"
+        Me.ideStatStr1.Size = New System.Drawing.Size(905, 22)
+        Me.ideStatStr1.TabIndex = 1
+        Me.ideStatStr1.Text = "StatusStrip1"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 17)
+        Me.ToolStripStatusLabel1.Text = "%statusLabel%"
+        '
+        'ideTS1
+        '
+        Me.ideTS1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ideTS1.Location = New System.Drawing.Point(0, 24)
+        Me.ideTS1.Name = "ideTS1"
+        Me.ideTS1.Size = New System.Drawing.Size(905, 25)
+        Me.ideTS1.TabIndex = 2
+        Me.ideTS1.Text = "ToolStrip1"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
@@ -288,51 +340,30 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
-        'ToolStripSeparator1
+        'Label3
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(6, 81)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 17)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "%fileName%"
         '
-        'ProjectInformationsToolStripMenuItem
+        'Label4
         '
-        Me.ProjectInformationsToolStripMenuItem.Name = "ProjectInformationsToolStripMenuItem"
-        Me.ProjectInformationsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.ProjectInformationsToolStripMenuItem.Text = "Project Informations"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Label4.Location = New System.Drawing.Point(6, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 18)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Current File:"
         '
-        'ProjectSettingsToolStripMenuItem
+        'checkTmr1
         '
-        Me.ProjectSettingsToolStripMenuItem.Name = "ProjectSettingsToolStripMenuItem"
-        Me.ProjectSettingsToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
-        Me.ProjectSettingsToolStripMenuItem.Text = "Project Settings"
-        '
-        'ToolStripProgressBar1
-        '
-        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 17)
-        Me.ToolStripStatusLabel1.Text = "%statusLabel%"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
-        '
-        'CheckForNewVersionsToolStripMenuItem
-        '
-        Me.CheckForNewVersionsToolStripMenuItem.Name = "CheckForNewVersionsToolStripMenuItem"
-        Me.CheckForNewVersionsToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
-        Me.CheckForNewVersionsToolStripMenuItem.Text = "Check for new Versions"
-        '
-        'WEBSITEToolStripMenuItem
-        '
-        Me.WEBSITEToolStripMenuItem.Name = "WEBSITEToolStripMenuItem"
-        Me.WEBSITEToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
-        Me.WEBSITEToolStripMenuItem.Text = "Website"
+        Me.checkTmr1.Enabled = True
+        Me.checkTmr1.Interval = 10000
         '
         'Form1
         '
@@ -341,16 +372,16 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(905, 543)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.ideTS1)
+        Me.Controls.Add(Me.ideStatStr1)
+        Me.Controls.Add(Me.mainIDEStr)
+        Me.MainMenuStrip = Me.mainIDEStr
         Me.Name = "Form1"
         Me.Text = "Craftbyte Mod IDE - %prjName%"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        Me.mainIDEStr.ResumeLayout(False)
+        Me.mainIDEStr.PerformLayout()
+        Me.ideStatStr1.ResumeLayout(False)
+        Me.ideStatStr1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -359,9 +390,9 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents mainIDEStr As MenuStrip
+    Friend WithEvents ideStatStr1 As StatusStrip
+    Friend WithEvents ideTS1 As ToolStrip
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents RichTextBox1 As RichTextBox
@@ -398,4 +429,7 @@ Partial Class Form1
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckForNewVersionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WEBSITEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents checkTmr1 As Timer
 End Class

@@ -12,32 +12,42 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text = "" Or TextBox1.Text.Length < 3 Then
-            MessageBox.Show("The Project Name Textbox can't be empty or be under 3 letters!", "Project Name too short!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
-        If TextBox2.Text = "" Or TextBox2.Text.Length < 3 Then
-            MessageBox.Show("The Mod Name Textbox can't be empty or be under 3 letters!", "Mod Name too short!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
-        If RadioButton1.Checked = False And RadioButton2.Checked = False Then
-            MessageBox.Show("Please select an Version you want to develop for!", "Select an Version you want to develop for!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        End If
-        If CheckBox1.Checked = True Then
-            ' todo
+        If TextBox1.Text.Length < 3 Or TextBox2.Text.Length < 3 Then
+
+            MessageBox.Show("The Project Name/Mod Name Textbox can't be empty or be under 3 letters!", "Project/Mod Name too short!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Else
+
+
+            If RadioButton1.Checked = True Then
+                DevelopForMCVer = 1
+            ElseIf RadioButton2.Checked = True Then
+                DevelopForMCVer = 2
+            End If
+
+
+            ModName = TextBox2.Text
+            PrjName = TextBox1.Text
+
+            CreateProject()
         End If
 
-        If RadioButton1.Checked = True Then
-            DevelopForMCVer = 1
-        ElseIf RadioButton2.Checked = True Then
-            DevelopForMCVer = 2
-        End If
 
-        ModName = TextBox2.Text
-        PrjName = TextBox1.Text
 
-        ProjectCreator.Show()
+
+
+
+
+
+
+
+
     End Sub
 
     Private Sub CreateProject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Sub CreateProject()
+        ProjectCreator.ShowDialog()
     End Sub
 End Class

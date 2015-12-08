@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Public Class WelcomeForm
     Public cpsFileLoc As String
     Private Sub WelcomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -38,5 +39,8 @@ Public Class WelcomeForm
 
     Private Sub WelcomeForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
+    End Sub
+
+    Private Sub WelcomeForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
     End Sub
 End Class
