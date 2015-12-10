@@ -112,50 +112,69 @@ Public Class Form1
                 CurrentPrjDir = "C:\Craftbyte Mod IDE\Projects\" & CurrentPrjName & "\"
             Catch ex As DirectoryNotFoundException
                 MessageBox.Show("An error occured while trying to get the Directory of the current Project: Directory not found. Please check if the directory exists! Full error message: " & ex.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                CurrentPrjDir = "ERROR: " & ex.Message
+                CurrentPrjDir = "ERROR!"
             Catch ex_ As Exception
                 MessageBox.Show("An unknown error occured while trying to get the Directory of the current Project! Full error message: " & ex_.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                CurrentPrjDir = "ERROR: " & ex_.Message
+                CurrentPrjDir = "ERROR!"
             End Try
         End Get
     End Property
 
 
     Function prjNameFileReader() As String
-        Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
+        Try
+            Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
 
-            For i As Integer = 1 To 3 - 1
-                If filereader.ReadLine() Is Nothing Then
+                For i As Integer = 1 To 3 - 1
+                    If filereader.ReadLine() Is Nothing Then
+                        Throw New ArgumentOutOfRangeException("lineNumber")
+                    End If
+                Next
+
+                Dim line As String = filereader.ReadLine()
+                If line Is Nothing Then
                     Throw New ArgumentOutOfRangeException("lineNumber")
                 End If
-            Next
 
-            Dim line As String = filereader.ReadLine()
-            If line Is Nothing Then
-                Throw New ArgumentOutOfRangeException("lineNumber")
-            End If
-
-            Return line
-        End Using
+                Return line
+            End Using
+        Catch direx As DirectoryNotFoundException
+            MessageBox.Show("An error occured while trying to get the Project name. Error: Directory not found. Check if the project directory still exists! Full error message: " & direx.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return "ERROR!"
+        Catch filex As FileNotFoundException
+            MessageBox.Show("An error occured while trying to get the Project name. Error: File not found. Check if the Project solution file still exists. Full error message: " & filex.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return "ERROR!"
+        End Try
     End Function
 
 
     Function modNameFileReader() As String
-        Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
+        Try
+            Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
 
-            For i As Integer = 1 To 4 - 1
-                If filereader.ReadLine() Is Nothing Then
+                For i As Integer = 1 To 4 - 1
+                    If filereader.ReadLine() Is Nothing Then
+                        Throw New ArgumentOutOfRangeException("lineNumber")
+                    End If
+                Next
+
+                Dim line As String = filereader.ReadLine()
+                If line Is Nothing Then
                     Throw New ArgumentOutOfRangeException("lineNumber")
                 End If
-            Next
 
-            Dim line As String = filereader.ReadLine()
-            If line Is Nothing Then
-                Throw New ArgumentOutOfRangeException("lineNumber")
-            End If
+                Return line
 
-            Return line
-        End Using
+            End Using
+
+        Catch direx As DirectoryNotFoundException
+            MessageBox.Show("An error occured while trying to get the Mod name. Error: Directory not found. Check if the project directory still exists! Full error message: " & direx.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return "ERROR!"
+        Catch filex As FileNotFoundException
+            MessageBox.Show("An error occured while trying to get the Mod name. Error: File not found. Check if the Project solution file still exists. Full error message: " & filex.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return "ERROR!"
+        End Try
+
     End Function
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
