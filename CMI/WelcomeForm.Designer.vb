@@ -39,6 +39,7 @@ Partial Class WelcomeForm
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,6 +202,7 @@ Partial Class WelcomeForm
         '
         'Panel4
         '
+        Me.Panel4.Controls.Add(Me.Button5)
         Me.Panel4.Controls.Add(Me.Label5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel4.Location = New System.Drawing.Point(693, 0)
@@ -217,6 +219,15 @@ Partial Class WelcomeForm
         Me.Label5.Size = New System.Drawing.Size(112, 24)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Other things"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(9, 52)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(108, 47)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'WelcomeForm
         '
@@ -258,4 +269,5 @@ Partial Class WelcomeForm
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button5 As Button
 End Class

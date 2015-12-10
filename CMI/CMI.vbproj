@@ -78,6 +78,12 @@
     <Compile Include="CreateProject.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="firstStartSetup.Designer.vb">
+      <DependentUpon>firstStartSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="firstStartSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PrjCreator.vb" />
+    <Compile Include="prjInformations.Designer.vb">
+      <DependentUpon>prjInformations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="prjInformations.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ProjectCreator.Designer.vb">
       <DependentUpon>ProjectCreator.vb</DependentUpon>
     </Compile>
@@ -124,6 +136,9 @@
     <EmbeddedResource Include="CreateProject.resx">
       <DependentUpon>CreateProject.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="firstStartSetup.resx">
+      <DependentUpon>firstStartSetup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpenProject.resx">
       <DependentUpon>OpenProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prjInformations.resx">
+      <DependentUpon>prjInformations.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectCreator.resx">
       <DependentUpon>ProjectCreator.vb</DependentUpon>

@@ -4,10 +4,6 @@ Imports System.Text
 
 Public Class Form1
     Public newFile As Boolean
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles mainIDEStr.ItemClicked
-
-    End Sub
-
     Private Sub NewProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectToolStripMenuItem.Click
         If RichTextBox1.Text.Length > 10 Then
             If MessageBox.Show("Are you sure you want to create a new Project without saving your current file/project?", "Save before creating new Project?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
@@ -42,11 +38,17 @@ Public Class Form1
             WelcomeForm.Visible = False
         End If
 
-        Label2.Text = CurrentPrjName
-        Label3.Text = "New file"
-    End Sub
+        Try
+            Label5.Text = CurrentModName
+            Label2.Text = CurrentPrjName
 
-    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ideStatStr1.ItemClicked
+        Catch ex As Exception
+            MessageBox.Show("An error occured while getting the Mod and Project names. Error: " & ex.Message & " - Please contact the developer for help and informations.", "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+
+        End Try
+        Label3.Text = "New file"
+
 
     End Sub
 
@@ -92,26 +94,61 @@ Public Class Form1
         newFileMainFrmIDEWindow.Show()
     End Sub
 
-    Private Sub SaveProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveProjectToolStripMenuItem.Click
-
-    End Sub
-
     Public ReadOnly Property CurrentPrjName As String
         Get
             CurrentPrjName = prjNameFileReader()
         End Get
     End Property
 
+    Public ReadOnly Property CurrentModName As String
+        Get
+            CurrentModName = modNameFileReader()
+        End Get
+    End Property
+
+    Public ReadOnly Property CurrentPrjDir As String
+        Get
+            Try
+                CurrentPrjDir = "C:\Craftbyte Mod IDE\Projects\" & CurrentPrjName & "\"
+            Catch ex As DirectoryNotFoundException
+                MessageBox.Show("An error occured while trying to get the Directory of the current Project: Directory not found. Please check if the directory exists! Full error message: " & ex.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                CurrentPrjDir = "ERROR: " & ex.Message
+            Catch ex_ As Exception
+                MessageBox.Show("An unknown error occured while trying to get the Directory of the current Project! Full error message: " & ex_.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                CurrentPrjDir = "ERROR: " & ex_.Message
+            End Try
+        End Get
+    End Property
+
 
     Function prjNameFileReader() As String
         Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
-            ' skip all lines we dont want to read
+
             For i As Integer = 1 To 3 - 1
                 If filereader.ReadLine() Is Nothing Then
                     Throw New ArgumentOutOfRangeException("lineNumber")
                 End If
             Next
-            ' read the line that we want to read
+
+            Dim line As String = filereader.ReadLine()
+            If line Is Nothing Then
+                Throw New ArgumentOutOfRangeException("lineNumber")
+            End If
+
+            Return line
+        End Using
+    End Function
+
+
+    Function modNameFileReader() As String
+        Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
+
+            For i As Integer = 1 To 4 - 1
+                If filereader.ReadLine() Is Nothing Then
+                    Throw New ArgumentOutOfRangeException("lineNumber")
+                End If
+            Next
+
             Dim line As String = filereader.ReadLine()
             If line Is Nothing Then
                 Throw New ArgumentOutOfRangeException("lineNumber")
@@ -124,5 +161,10 @@ Public Class Form1
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Application.Exit()
         End
+    End Sub
+
+    Private Sub ProjectInformationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectInformationsToolStripMenuItem.Click
+        prjInformations.ShowDialog()
+
     End Sub
 End Class

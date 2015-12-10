@@ -43,4 +43,8 @@ Public Class WelcomeForm
 
     Private Sub WelcomeForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

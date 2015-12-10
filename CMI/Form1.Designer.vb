@@ -58,13 +58,15 @@ Partial Class Form1
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -132,19 +134,19 @@ Partial Class Form1
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'OpenFileToolStripMenuItem
         '
         Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
-        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.OpenFileToolStripMenuItem.Text = "Open File"
         '
         'SaveFileToolStripMenuItem
         '
         Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.SaveFileToolStripMenuItem.Text = "Save File"
         '
         'EditToolStripMenuItem
@@ -157,43 +159,43 @@ Partial Class Form1
         'UndoToolStripMenuItem
         '
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.UndoToolStripMenuItem.Text = "Undo"
         '
         'RedoToolStripMenuItem
         '
         Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.RedoToolStripMenuItem.Text = "Redo"
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select all"
         '
         'DeselectAllToolStripMenuItem
         '
         Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.DeselectAllToolStripMenuItem.Text = "Deselect all"
         '
         'SearchReplaceToolStripMenuItem
@@ -289,6 +291,8 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -300,6 +304,26 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project && File"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(6, 119)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 17)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "%fileName%"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Label4.Location = New System.Drawing.Point(6, 101)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 18)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Current File:"
         '
         'Label2
         '
@@ -340,30 +364,30 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(6, 81)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 17)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "%fileName%"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label4.Location = New System.Drawing.Point(6, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 18)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Current File:"
-        '
         'checkTmr1
         '
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(6, 76)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(105, 17)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "%modName%"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Label6.Location = New System.Drawing.Point(6, 58)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(95, 18)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Current Mod:"
         '
         'Form1
         '
@@ -432,4 +456,6 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents checkTmr1 As Timer
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class
