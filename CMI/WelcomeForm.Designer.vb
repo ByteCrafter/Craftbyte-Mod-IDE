@@ -38,8 +38,8 @@ Partial Class WelcomeForm
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +145,7 @@ Partial Class WelcomeForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ScrollBar
         Me.Label2.Location = New System.Drawing.Point(58, 426)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(262, 20)
@@ -210,6 +210,15 @@ Partial Class WelcomeForm
         Me.Panel4.Size = New System.Drawing.Size(123, 446)
         Me.Panel4.TabIndex = 6
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(9, 52)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(108, 47)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -219,15 +228,6 @@ Partial Class WelcomeForm
         Me.Label5.Size = New System.Drawing.Size(112, 24)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Other things"
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(9, 52)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(108, 47)
-        Me.Button5.TabIndex = 1
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'WelcomeForm
         '

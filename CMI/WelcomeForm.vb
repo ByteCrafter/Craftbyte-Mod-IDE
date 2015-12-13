@@ -38,7 +38,12 @@ Public Class WelcomeForm
     End Sub
 
     Private Sub WelcomeForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If My.Settings.firstStart = True Then
+            Me.Hide()
+            firstStartSetup.Show()
+        Else
 
+        End If
     End Sub
 
     Private Sub WelcomeForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing

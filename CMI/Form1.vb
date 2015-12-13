@@ -15,9 +15,28 @@ Public Class Form1
             End If
         End If
     End Sub
+    Private Async Sub createPrjInfoFilesFile()
+        If ProjectCreator.newProject = True Then
+
+            Dim sb As StringBuilder = New StringBuilder()
+            sb.AppendLine("CMI Project files information helper file")
+            sb.AppendLine("-CreatedOn: " & TimeOfDay)
+            sb.AppendLine("new file")
+            sb.AppendLine(Nothing)
+            sb.AppendLine("DevelopForMCVer: " & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
+
+            Using outfile As StreamWriter = New StreamWriter("C:\Craftbyte Mod IDE\Projects\" & CurrentPrjName & "\" & CreateProject.ModName & ".cpf", True)
+                Await outfile.WriteAsync(sb.ToString())
+            End Using
+        End If
+    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Craftbyte Mod IDE - " & CurrentPrjName
+
+        If ProjectCreator.newProject = True Then
+
+        End If
 
         ToolStripProgressBar1.Style = ProgressBarStyle.Marquee
         ToolStripStatusLabel1.Text = "Creating files, options and more. You can use all full functions of the IDE after this task has finished!"

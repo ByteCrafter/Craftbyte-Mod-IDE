@@ -58,6 +58,8 @@ Partial Class Form1
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -65,8 +67,6 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -305,6 +305,26 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project && File"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(6, 76)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(105, 17)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "%modName%"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.Label6.Location = New System.Drawing.Point(6, 58)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(95, 18)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Current Mod:"
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -368,26 +388,6 @@ Partial Class Form1
         '
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.Label5.Location = New System.Drawing.Point(6, 76)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 17)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "%modName%"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.Label6.Location = New System.Drawing.Point(6, 58)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(95, 18)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Current Mod:"
         '
         'Form1
         '

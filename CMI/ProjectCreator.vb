@@ -2,6 +2,7 @@
 Imports System.Text
 
 Public Class ProjectCreator
+    Public newProject = True
     Private Sub ProjectCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Create project directories
         IO.Directory.CreateDirectory("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\")
