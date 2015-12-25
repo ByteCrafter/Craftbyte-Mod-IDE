@@ -145,6 +145,18 @@
     <Compile Include="ProjectCreator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="searchFor.Designer.vb">
+      <DependentUpon>searchFor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchFor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updater.Designer.vb">
+      <DependentUpon>updater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updater.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomeForm.Designer.vb">
       <DependentUpon>WelcomeForm.vb</DependentUpon>
     </Compile>
@@ -176,6 +188,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectCreator.resx">
       <DependentUpon>ProjectCreator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchFor.resx">
+      <DependentUpon>searchFor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updater.resx">
+      <DependentUpon>updater.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.vb</DependentUpon>

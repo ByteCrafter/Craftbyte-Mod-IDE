@@ -54,8 +54,6 @@ Partial Class Form1
         Me.CheckForNewVersionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WEBSITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ideStatStr1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -67,6 +65,8 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -75,7 +75,7 @@ Partial Class Form1
         '
         'mainIDEStr
         '
-        Me.mainIDEStr.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProjectToolStripMenuItem, Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.SearchReplaceToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.mainIDEStr.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProjectToolStripMenuItem, Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.SearchReplaceToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ReportAnBugToolStripMenuItem})
         Me.mainIDEStr.Location = New System.Drawing.Point(0, 0)
         Me.mainIDEStr.Name = "mainIDEStr"
         Me.mainIDEStr.Size = New System.Drawing.Size(905, 24)
@@ -262,23 +262,12 @@ Partial Class Form1
         '
         'ideStatStr1
         '
-        Me.ideStatStr1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
+        Me.ideStatStr1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
         Me.ideStatStr1.Location = New System.Drawing.Point(0, 521)
         Me.ideStatStr1.Name = "ideStatStr1"
         Me.ideStatStr1.Size = New System.Drawing.Size(905, 22)
         Me.ideStatStr1.TabIndex = 1
         Me.ideStatStr1.Text = "StatusStrip1"
-        '
-        'ToolStripProgressBar1
-        '
-        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(86, 17)
-        Me.ToolStripStatusLabel1.Text = "%statusLabel%"
         '
         'ideTS1
         '
@@ -389,6 +378,18 @@ Partial Class Form1
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(280, 17)
+        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version preview0.0.0.1.prealpha"
+        '
+        'ReportAnBugToolStripMenuItem
+        '
+        Me.ReportAnBugToolStripMenuItem.Name = "ReportAnBugToolStripMenuItem"
+        Me.ReportAnBugToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.ReportAnBugToolStripMenuItem.Text = "Report an Bug"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -448,8 +449,6 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ProjectInformationsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProjectSettingsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckForNewVersionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WEBSITEToolStripMenuItem As ToolStripMenuItem
@@ -458,4 +457,6 @@ Partial Class Form1
     Friend WithEvents checkTmr1 As Timer
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents ReportAnBugToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 End Class

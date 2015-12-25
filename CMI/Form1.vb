@@ -3,7 +3,11 @@ Imports System.IO
 Imports System.Text
 
 Public Class Form1
-    Public newFile As Boolean
+    Public CurrentPrjName As String
+    Public CurrentModName As String
+    Public CurrentCpsFileLoc As String
+
+
     Private Sub NewProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectToolStripMenuItem.Click
         If RichTextBox1.Text.Length > 10 Then
             If MessageBox.Show("Are you sure you want to create a new Project without saving your current file/project?", "Save before creating new Project?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
@@ -15,31 +19,15 @@ Public Class Form1
             End If
         End If
     End Sub
-    Private Async Sub createPrjInfoFilesFile()
-        If ProjectCreator.newProject = True Then
 
-            Dim sb As StringBuilder = New StringBuilder()
-            sb.AppendLine("CMI Project files information helper file")
-            sb.AppendLine("-CreatedOn: " & TimeOfDay)
-            sb.AppendLine("new file")
-            sb.AppendLine(Nothing)
-            sb.AppendLine("DevelopForMCVer: " & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
 
-            Using outfile As StreamWriter = New StreamWriter("C:\Craftbyte Mod IDE\Projects\" & CurrentPrjName & "\" & CreateProject.ModName & ".cpf", True)
-                Await outfile.WriteAsync(sb.ToString())
-            End Using
-        End If
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Craftbyte Mod IDE - " & CurrentPrjName
+        Me.Text = "Craftbyte Mod IDE - Initializing"
 
-        If ProjectCreator.newProject = True Then
 
-        End If
 
-        ToolStripProgressBar1.Style = ProgressBarStyle.Marquee
-        ToolStripStatusLabel1.Text = "Creating files, options and more. You can use all full functions of the IDE after this task has finished!"
+
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
@@ -57,15 +45,11 @@ Public Class Form1
             WelcomeForm.Visible = False
         End If
 
-        Try
-            Label5.Text = CurrentModName
-            Label2.Text = CurrentPrjName
-
-        Catch ex As Exception
-            MessageBox.Show("An error occured while getting the Mod and Project names. Error: " & ex.Message & " - Please contact the developer for help and informations.", "An error occured!", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
 
-        End Try
+
+
+
         Label3.Text = "New file"
 
 
@@ -79,7 +63,9 @@ Public Class Form1
             End Using
         End If
 
+    End Sub
 
+    Private Sub InitIDE()
 
     End Sub
 
@@ -109,92 +95,9 @@ Public Class Form1
 
     Private Sub NewFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFileToolStripMenuItem.Click
         Dim newFileMainFrmIDEWindow As New Form1
-        newFileMainFrmIDEWindow.Text = "Craftbyte Mod IDE - " & CurrentPrjName & " - New File"
+        newFileMainFrmIDEWindow.Text = "Craftbyte Mod IDE - " & " - New File"
         newFileMainFrmIDEWindow.Show()
     End Sub
-
-    Public ReadOnly Property CurrentPrjName As String
-        Get
-            CurrentPrjName = prjNameFileReader()
-        End Get
-    End Property
-
-    Public ReadOnly Property CurrentModName As String
-        Get
-            CurrentModName = modNameFileReader()
-        End Get
-    End Property
-
-    Public ReadOnly Property CurrentPrjDir As String
-        Get
-            Try
-                CurrentPrjDir = "C:\Craftbyte Mod IDE\Projects\" & CurrentPrjName & "\"
-            Catch ex As DirectoryNotFoundException
-                MessageBox.Show("An error occured while trying to get the Directory of the current Project: Directory not found. Please check if the directory exists! Full error message: " & ex.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                CurrentPrjDir = "ERROR!"
-            Catch ex_ As Exception
-                MessageBox.Show("An unknown error occured while trying to get the Directory of the current Project! Full error message: " & ex_.Message & "", "Error while getting project directory", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                CurrentPrjDir = "ERROR!"
-            End Try
-        End Get
-    End Property
-
-
-    Function prjNameFileReader() As String
-        Try
-            Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
-
-                For i As Integer = 1 To 3 - 1
-                    If filereader.ReadLine() Is Nothing Then
-                        Throw New ArgumentOutOfRangeException("lineNumber")
-                    End If
-                Next
-
-                Dim line As String = filereader.ReadLine()
-                If line Is Nothing Then
-                    Throw New ArgumentOutOfRangeException("lineNumber")
-                End If
-
-                Return line
-            End Using
-        Catch direx As DirectoryNotFoundException
-            MessageBox.Show("An error occured while trying to get the Project name. Error: Directory not found. Check if the project directory still exists! Full error message: " & direx.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return "ERROR!"
-        Catch filex As FileNotFoundException
-            MessageBox.Show("An error occured while trying to get the Project name. Error: File not found. Check if the Project solution file still exists. Full error message: " & filex.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return "ERROR!"
-        End Try
-    End Function
-
-
-    Function modNameFileReader() As String
-        Try
-            Using filereader As New StreamReader("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\" & CreateProject.ModName & ".cps")
-
-                For i As Integer = 1 To 4 - 1
-                    If filereader.ReadLine() Is Nothing Then
-                        Throw New ArgumentOutOfRangeException("lineNumber")
-                    End If
-                Next
-
-                Dim line As String = filereader.ReadLine()
-                If line Is Nothing Then
-                    Throw New ArgumentOutOfRangeException("lineNumber")
-                End If
-
-                Return line
-
-            End Using
-
-        Catch direx As DirectoryNotFoundException
-            MessageBox.Show("An error occured while trying to get the Mod name. Error: Directory not found. Check if the project directory still exists! Full error message: " & direx.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return "ERROR!"
-        Catch filex As FileNotFoundException
-            MessageBox.Show("An error occured while trying to get the Mod name. Error: File not found. Check if the Project solution file still exists. Full error message: " & filex.Message, "Error while trying to get the Project name!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return "ERROR!"
-        End Try
-
-    End Function
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Application.Exit()
@@ -204,5 +107,46 @@ Public Class Form1
     Private Sub ProjectInformationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectInformationsToolStripMenuItem.Click
         prjInformations.ShowDialog()
 
+    End Sub
+
+    Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
+        RichTextBox1.Undo()
+    End Sub
+
+    Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
+        RichTextBox1.Redo()
+    End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        RichTextBox1.Copy()
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+        RichTextBox1.Paste()
+    End Sub
+
+    Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
+        RichTextBox1.Cut()
+    End Sub
+
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+        RichTextBox1.SelectAll()
+    End Sub
+
+    Private Sub DeselectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllToolStripMenuItem.Click
+        RichTextBox1.DeselectAll()
+    End Sub
+
+    Private Sub SearchForToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchForToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub LoadProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadProjectToolStripMenuItem.Click
+        MessageBox.Show("This function got broken by Visual Studio, so you can currently not use this! Sorry! :(", "Function currently broken", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+    End Sub
+
+    Private Sub ReportAnBugToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportAnBugToolStripMenuItem.Click
+        MessageBox.Show("Report an Bug to the official Craftbyte Mod IDE GitHub Repo or the official Minecraft Forum thread!", "Report an Bug", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

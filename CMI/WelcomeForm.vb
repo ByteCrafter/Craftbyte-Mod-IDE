@@ -27,7 +27,6 @@ Public Class WelcomeForm
             .InitialDirectory = "C:\Craftbyte Mod IDE\Projects\"
             .Title = "Open a Project"
         End With
-
         If ofd.ShowDialog() = DialogResult.OK Then
             cpsFileLoc = ofd.FileName
             OpenProject.ShowDialog()
@@ -38,7 +37,13 @@ Public Class WelcomeForm
     End Sub
 
     Private Sub WelcomeForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        If My.Settings.firstStart = True Then
+        If MessageBox.Show("This release is currently very broken due to an Visual Studio error. By clicking 'Yes' you acknowledge that ALL functions are currently in a very early Alpha state and that ALL features and functions might not work! This is an Preview-Prealpha release! You can't compile or make Mods currently!!", "Craftbyte Mod IDE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+
+        Else
+            Application.Exit()
+
+        End If
+        If My.Settings.firstStart = False Then
             Me.Hide()
             firstStartSetup.Show()
         Else

@@ -7,6 +7,7 @@ Public Class OpenProject
     Private Sub OpenProject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReadProjectInfoFile()
 
+        MessageBox.Show(PrjName & ModName & DevelopForMCVer, "test")
     End Sub
 
     Function ReadLineOfFiles(filePath As String, ByVal lineNumber As Integer) As String
@@ -41,10 +42,8 @@ Public Class OpenProject
         ModName = ReadLineOfFiles(WelcomeForm.cpsFileLoc, 4)
 
         If PrjName & ModName & DevelopForMCVer.ToString IsNot Nothing Then 'If Project Name, Mod Name and DevelopForMCVer is loaded then do next step
-            ChangeLblText(Label2, "Loading other files...")
-
-        Else
-
+            Form1.Show()
+            Me.Hide()
         End If
 
     End Sub

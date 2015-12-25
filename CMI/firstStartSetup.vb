@@ -22,18 +22,18 @@ Public Class firstStartSetup
             Label2.Text = "Downloading Forge..."
             Label6.Text = "0%"
             Label5.Text = "0 bytes Of 0"
-            dlForge()
-        End If
-
-        If Label2.Text = "Downloading Forge..." And e.BytesReceived = e.TotalBytesToReceive Then
-            Label2.Text = "Downloading MCP..."
-            Label6.Text = "0%"
-            Label5.Text = "0 bytes Of 0"
             dlMCP()
         End If
 
         If Label2.Text = "Downloading MCP..." And e.BytesReceived = e.TotalBytesToReceive Then
-            PrepareToUnpack()
+            Label2.Text = "Downloading Forge..."
+            Label6.Text = "0%"
+            Label5.Text = "0 bytes Of 0"
+            dlForge()
+        End If
+
+        If Label2.Text = "Downloading Forge..." And e.BytesReceived = e.TotalBytesToReceive Then
+
         End If
 
     End Sub
@@ -79,9 +79,14 @@ Public Class firstStartSetup
     End Sub
 
     Private Sub unzipWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles unzipWorker1.DoWork
-        ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_gradle-2.9.zip", "C:\Craftbyte Mod IDE\gradle")
-        ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_forge-dev-1558.zip", "C:\Craftbyte Mod IDE\forge-1558")
-        ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_mcp-dev-9.08.zip", "C:\Craftbyte Mod IDE\mcp-9.08")
+        Try
+            ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_gradle-2.9.zip", "C:\Craftbyte Mod IDE\gradle")
+            ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_forge-dev-1558.zip", "C:\Craftbyte Mod IDE\forge-1558")
+            ZipFile.ExtractToDirectory("C:\Craftbyte Mod IDE\cmi_mcp-dev-9.08.zip", "C:\Craftbyte Mod IDE\mcp-9.08")
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
 #End Region
