@@ -53,7 +53,9 @@ Partial Class Form1
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckForNewVersionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WEBSITEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ideStatStr1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -65,8 +67,6 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -260,6 +260,12 @@ Partial Class Form1
         Me.WEBSITEToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.WEBSITEToolStripMenuItem.Text = "Website"
         '
+        'ReportAnBugToolStripMenuItem
+        '
+        Me.ReportAnBugToolStripMenuItem.Name = "ReportAnBugToolStripMenuItem"
+        Me.ReportAnBugToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.ReportAnBugToolStripMenuItem.Text = "Report an Bug"
+        '
         'ideStatStr1
         '
         Me.ideStatStr1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
@@ -268,6 +274,12 @@ Partial Class Form1
         Me.ideStatStr1.Size = New System.Drawing.Size(905, 22)
         Me.ideStatStr1.TabIndex = 1
         Me.ideStatStr1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(311, 17)
+        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version PREVIEW-001-0.0.0.1prealpha"
         '
         'ideTS1
         '
@@ -377,18 +389,6 @@ Partial Class Form1
         '
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(280, 17)
-        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version preview0.0.0.1.prealpha"
-        '
-        'ReportAnBugToolStripMenuItem
-        '
-        Me.ReportAnBugToolStripMenuItem.Name = "ReportAnBugToolStripMenuItem"
-        Me.ReportAnBugToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
-        Me.ReportAnBugToolStripMenuItem.Text = "Report an Bug"
         '
         'Form1
         '

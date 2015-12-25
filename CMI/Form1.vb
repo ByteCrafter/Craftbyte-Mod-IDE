@@ -149,4 +149,8 @@ Public Class Form1
     Private Sub ReportAnBugToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportAnBugToolStripMenuItem.Click
         MessageBox.Show("Report an Bug to the official Craftbyte Mod IDE GitHub Repo or the official Minecraft Forum thread!", "Report an Bug", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+
+    End Sub
 End Class
