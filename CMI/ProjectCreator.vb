@@ -8,19 +8,19 @@ Public Class ProjectCreator
         IO.Directory.CreateDirectory("C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\")
 
         ' Create Project info files
-        PrjSolutionFileWriter()
+        PrjSolutionFileWriter(TimeOfDay, CreateProject.TextBox1.Text, CreateProject.TextBox2.Text, 1)
     End Sub
 
-    Private Async Sub PrjSolutionFileWriter()
+    Private Async Sub PrjSolutionFileWriter(ByVal time As String, ByVal prjName As String, ByVal modName As String, ByVal mcVer As Integer)
 
         Dim prjPath As String = "C:\Craftbyte Mod IDE\Projects\" & CreateProject.PrjName & "\"
 
         Dim sb As StringBuilder = New StringBuilder()
         sb.AppendLine("CMI Project solution file")
-        sb.AppendLine("-CreatedOn: " & TimeOfDay)
-        sb.AppendLine(CreateProject.PrjName)
-        sb.AppendLine(CreateProject.ModName)
-        sb.AppendLine("DevelopForMCVer: " & CreateProject.DevelopForMCVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
+        sb.AppendLine("-CreatedOn: " & time)
+        sb.AppendLine(prjName)
+        sb.AppendLine(modName)
+        sb.AppendLine("DevelopForMCVer: " & mcVer & "  # 1 means for 1.7.10 and 2 means for 1.8")
 
         Using outfile As StreamWriter = New StreamWriter(prjPath + "\" & CreateProject.ModName & ".cps", True)
             Await outfile.WriteAsync(sb.ToString())
