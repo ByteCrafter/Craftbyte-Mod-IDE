@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("An Minecraft Mod IDE for Minecraft Mod Developers")>
 <Assembly: AssemblyCompany("Craftbyte Developments")>
 <Assembly: AssemblyProduct("Craftbyte Mod IDE")>
-<Assembly: AssemblyCopyright("Copyright © 2015 Craftbyte Developments / ByteCrafter / Daniel K.")>
+<Assembly: AssemblyCopyright("Copyright © 2016 Craftbyte Developments / ByteCrafter / Daniel K.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

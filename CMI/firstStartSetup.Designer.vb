@@ -44,7 +44,7 @@ Partial Class firstStartSetup
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 6)
+        Me.Label1.Location = New System.Drawing.Point(32, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(385, 26)
         Me.Label1.TabIndex = 7
@@ -56,7 +56,7 @@ Partial Class firstStartSetup
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(33, 61)
+        Me.Label2.Location = New System.Drawing.Point(32, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(133, 13)
         Me.Label2.TabIndex = 8
@@ -64,7 +64,7 @@ Partial Class firstStartSetup
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(37, 78)
+        Me.ProgressBar1.Location = New System.Drawing.Point(36, 78)
         Me.ProgressBar1.MarqueeAnimationSpeed = 30
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(379, 17)
@@ -73,7 +73,7 @@ Partial Class firstStartSetup
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(361, 97)
+        Me.Label3.Location = New System.Drawing.Point(360, 97)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
         Me.Label3.TabIndex = 10
@@ -83,7 +83,7 @@ Partial Class firstStartSetup
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(156, 33)
+        Me.Label4.Location = New System.Drawing.Point(155, 33)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(138, 13)
         Me.Label4.TabIndex = 11
@@ -102,7 +102,7 @@ Partial Class firstStartSetup
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(34, 97)
+        Me.Label5.Location = New System.Drawing.Point(33, 97)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 13)
         Me.Label5.TabIndex = 14
@@ -112,7 +112,7 @@ Partial Class firstStartSetup
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(120, 121)
+        Me.Label7.Location = New System.Drawing.Point(119, 121)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(114, 13)
         Me.Label7.TabIndex = 15
@@ -121,7 +121,7 @@ Partial Class firstStartSetup
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(231, 121)
+        Me.Label8.Location = New System.Drawing.Point(230, 121)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(100, 13)
         Me.Label8.TabIndex = 16

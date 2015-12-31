@@ -145,8 +145,11 @@ Partial Class CreateProject
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "CreateProject"
-        Me.Text = "CreateProject"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Text = "Create new Project"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

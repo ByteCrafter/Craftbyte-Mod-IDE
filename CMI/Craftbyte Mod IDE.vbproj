@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2287BEC0-D4F6-4D90-9FB1-01B02C46CC8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>CMI.My.MyApplication</StartupObject>
-    <RootNamespace>CMI</RootNamespace>
+    <StartupObject>CraftbyteModIDE.My.MyApplication</StartupObject>
+    <RootNamespace>CraftbyteModIDE</RootNamespace>
     <AssemblyName>Craftbyte Mod IDE</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
@@ -98,6 +98,12 @@
     <Compile Include="CreateProject.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FileManager.Designer.vb">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="firstStartSetup.Designer.vb">
       <DependentUpon>firstStartSetup.vb</DependentUpon>
     </Compile>
@@ -109,6 +115,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreOptions.Designer.vb">
+      <DependentUpon>MoreOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MoreOptions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -168,11 +180,17 @@
     <EmbeddedResource Include="CreateProject.resx">
       <DependentUpon>CreateProject.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileManager.resx">
+      <DependentUpon>FileManager.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="firstStartSetup.resx">
       <DependentUpon>firstStartSetup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreOptions.resx">
+      <DependentUpon>MoreOptions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
