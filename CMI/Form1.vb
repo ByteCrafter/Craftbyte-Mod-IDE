@@ -1,10 +1,8 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
 Imports System.Text
-
 Public Class Form1
-
-
+    Public CurrentPrjDir As String = ""
     Private Sub NewProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectToolStripMenuItem.Click
         If RichTextBox1.Text.Length > 10 Then
             If MessageBox.Show("Are you sure you want to create a new Project without saving your current file/project?", "Save before creating new Project?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
@@ -42,11 +40,6 @@ Public Class Form1
             WelcomeForm.Hide()
             WelcomeForm.Visible = False
         End If
-
-
-
-
-
 
         Label3.Text = "New file"
 
@@ -158,4 +151,5 @@ Public Class Form1
     Private Sub WEBSITEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WEBSITEToolStripMenuItem.Click
         Process.Start("http://bytecrafter.github.io/Craftbyte-Mod-IDE/")
     End Sub
+
 End Class
