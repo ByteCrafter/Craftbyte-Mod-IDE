@@ -2,8 +2,6 @@
 
 Public Class prjInformations
     Private Sub prjInformations_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        prjNameLbl1.Text = Form1.CurrentPrjName
-        modNameLbl1.Text = Form1.CurrentModName
 
     End Sub
 

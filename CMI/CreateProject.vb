@@ -1,5 +1,5 @@
 ﻿Public Class CreateProject
-    Public DevelopForMCVer As Integer = 0
+    Public DevelopForMCVer As Integer = 1
     Public ModName As String
     Public PrjName As String
 
@@ -12,35 +12,20 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text.Length < 3 Or TextBox2.Text.Length < 3 Then
-
-            MessageBox.Show("The Project Name/Mod Name Textbox can't be empty or be under 3 letters!", "Project/Mod Name too short!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        If CheckBox1.Checked = True Then
+            ModName = ""
+            PrjName = TextBox1.Text
+            CreateProject()
         Else
-
-
-            If RadioButton1.Checked = True Then
-                DevelopForMCVer = 1
-            ElseIf RadioButton2.Checked = True Then
-                DevelopForMCVer = 2
+            If TextBox1.Text.Length < 3 Or TextBox2.Text.Length < 3 Then
+                MessageBox.Show("The Project Name/Mod Name Textbox can't be empty or be under 3 letters!", "Project/Mod Name too short!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Else
+                ModName = TextBox2.Text
+                PrjName = TextBox1.Text
+                CreateProject()
             End If
 
-
-            ModName = TextBox2.Text
-            PrjName = TextBox1.Text
-
-            CreateProject()
         End If
-
-
-
-
-
-
-
-
-
-
-
     End Sub
 
     Private Sub CreateProject_Load(sender As Object, e As EventArgs) Handles MyBase.Load

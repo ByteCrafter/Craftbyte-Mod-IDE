@@ -66,6 +66,15 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.CompileFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompileModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunGradleTaskToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartTheMinecraftEnvironmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartTheMinecraftServerEnvironmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsForMinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowFilesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateAndCompileModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -218,18 +227,21 @@ Partial Class Form1
         '
         'ModToolStripMenuItem
         '
+        Me.ModToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowFilesToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.CreateAndCompileModToolStripMenuItem})
         Me.ModToolStripMenuItem.Name = "ModToolStripMenuItem"
         Me.ModToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ModToolStripMenuItem.Text = "Mod"
         '
         'MinecraftToolStripMenuItem
         '
+        Me.MinecraftToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartTheMinecraftEnvironmentToolStripMenuItem, Me.StartTheMinecraftServerEnvironmentToolStripMenuItem, Me.SettingsForMinecraftToolStripMenuItem})
         Me.MinecraftToolStripMenuItem.Name = "MinecraftToolStripMenuItem"
         Me.MinecraftToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.MinecraftToolStripMenuItem.Text = "Minecraft"
         '
         'CompileToolStripMenuItem
         '
+        Me.CompileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompileFileToolStripMenuItem, Me.CompileModToolStripMenuItem, Me.RunGradleTaskToolStripMenuItem})
         Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
         Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.CompileToolStripMenuItem.Text = "Compile"
@@ -380,6 +392,60 @@ Partial Class Form1
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
         '
+        'CompileFileToolStripMenuItem
+        '
+        Me.CompileFileToolStripMenuItem.Name = "CompileFileToolStripMenuItem"
+        Me.CompileFileToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.CompileFileToolStripMenuItem.Text = "Compile File"
+        '
+        'CompileModToolStripMenuItem
+        '
+        Me.CompileModToolStripMenuItem.Name = "CompileModToolStripMenuItem"
+        Me.CompileModToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.CompileModToolStripMenuItem.Text = "Compile Mod"
+        '
+        'RunGradleTaskToolStripMenuItem
+        '
+        Me.RunGradleTaskToolStripMenuItem.Name = "RunGradleTaskToolStripMenuItem"
+        Me.RunGradleTaskToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.RunGradleTaskToolStripMenuItem.Text = "Run Gradle Task"
+        '
+        'StartTheMinecraftEnvironmentToolStripMenuItem
+        '
+        Me.StartTheMinecraftEnvironmentToolStripMenuItem.Name = "StartTheMinecraftEnvironmentToolStripMenuItem"
+        Me.StartTheMinecraftEnvironmentToolStripMenuItem.Size = New System.Drawing.Size(278, 22)
+        Me.StartTheMinecraftEnvironmentToolStripMenuItem.Text = "Start the Minecraft Environment"
+        '
+        'StartTheMinecraftServerEnvironmentToolStripMenuItem
+        '
+        Me.StartTheMinecraftServerEnvironmentToolStripMenuItem.Name = "StartTheMinecraftServerEnvironmentToolStripMenuItem"
+        Me.StartTheMinecraftServerEnvironmentToolStripMenuItem.Size = New System.Drawing.Size(278, 22)
+        Me.StartTheMinecraftServerEnvironmentToolStripMenuItem.Text = "Start the Minecraft Server Environment"
+        '
+        'SettingsForMinecraftToolStripMenuItem
+        '
+        Me.SettingsForMinecraftToolStripMenuItem.Name = "SettingsForMinecraftToolStripMenuItem"
+        Me.SettingsForMinecraftToolStripMenuItem.Size = New System.Drawing.Size(278, 22)
+        Me.SettingsForMinecraftToolStripMenuItem.Text = "Settings for Minecraft"
+        '
+        'ShowFilesToolStripMenuItem
+        '
+        Me.ShowFilesToolStripMenuItem.Name = "ShowFilesToolStripMenuItem"
+        Me.ShowFilesToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.ShowFilesToolStripMenuItem.Text = "Files"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'CreateAndCompileModToolStripMenuItem
+        '
+        Me.CreateAndCompileModToolStripMenuItem.Name = "CreateAndCompileModToolStripMenuItem"
+        Me.CreateAndCompileModToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.CreateAndCompileModToolStripMenuItem.Text = "Create and Compile Mod"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -447,4 +513,13 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents ReportAnBugToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents ShowFilesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CreateAndCompileModToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartTheMinecraftEnvironmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartTheMinecraftServerEnvironmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsForMinecraftToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompileFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompileModToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RunGradleTaskToolStripMenuItem As ToolStripMenuItem
 End Class
