@@ -25,6 +25,7 @@ Partial Class WelcomeForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -40,7 +41,6 @@ Partial Class WelcomeForm
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +86,16 @@ Partial Class WelcomeForm
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Projects and Files"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(41, 101)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(79, 13)
+        Me.LinkLabel1.TabIndex = 4
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "More Options..."
         '
         'Button4
         '
@@ -148,15 +158,15 @@ Partial Class WelcomeForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label2.Location = New System.Drawing.Point(58, 426)
+        Me.Label2.Location = New System.Drawing.Point(42, 426)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(262, 20)
+        Me.Label2.Size = New System.Drawing.Size(295, 20)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "version PREVIEW-prealpha0.0.0.1"
+        Me.Label2.Text = "version PREVIEW-002-prealpha0.0.0.1"
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.CMI.My.Resources.Resources.Craftbyte_Mod_IDE
+        Me.PictureBox1.Image = Global.CraftbyteModIDE.My.Resources.Resources.Craftbyte_Mod_IDE
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(373, 46)
@@ -230,16 +240,6 @@ Partial Class WelcomeForm
         Me.Label5.Size = New System.Drawing.Size(112, 24)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Other things"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(41, 101)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(79, 13)
-        Me.LinkLabel1.TabIndex = 4
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "More Options..."
         '
         'WelcomeForm
         '

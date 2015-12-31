@@ -86,7 +86,6 @@ Public Class firstStartSetup
         Catch ex As Exception
 
         End Try
-
     End Sub
 
 #End Region

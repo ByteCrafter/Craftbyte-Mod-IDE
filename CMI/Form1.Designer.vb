@@ -56,7 +56,6 @@ Partial Class Form1
         Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ideStatStr1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ideTS1 = New System.Windows.Forms.ToolStrip()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -134,19 +133,19 @@ Partial Class Form1
         'NewFileToolStripMenuItem
         '
         Me.NewFileToolStripMenuItem.Name = "NewFileToolStripMenuItem"
-        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.NewFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewFileToolStripMenuItem.Text = "New File"
         '
         'OpenFileToolStripMenuItem
         '
         Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
-        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenFileToolStripMenuItem.Text = "Open File"
         '
         'SaveFileToolStripMenuItem
         '
         Me.SaveFileToolStripMenuItem.Name = "SaveFileToolStripMenuItem"
-        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.SaveFileToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveFileToolStripMenuItem.Text = "Save File"
         '
         'EditToolStripMenuItem
@@ -279,16 +278,7 @@ Partial Class Form1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(311, 17)
-        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version PREVIEW-001-0.0.0.1prealpha"
-        '
-        'ideTS1
-        '
-        Me.ideTS1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ideTS1.Location = New System.Drawing.Point(0, 24)
-        Me.ideTS1.Name = "ideTS1"
-        Me.ideTS1.Size = New System.Drawing.Size(905, 25)
-        Me.ideTS1.TabIndex = 2
-        Me.ideTS1.Text = "ToolStrip1"
+        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version PREVIEW-002-0.0.0.1prealpha"
         '
         'GroupBox1
         '
@@ -299,9 +289,9 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 49)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 24)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(212, 472)
+        Me.GroupBox1.Size = New System.Drawing.Size(212, 497)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project && File"
@@ -370,9 +360,9 @@ Partial Class Form1
         '
         Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(212, 49)
+        Me.Panel1.Location = New System.Drawing.Point(212, 24)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(693, 472)
+        Me.Panel1.Size = New System.Drawing.Size(693, 497)
         Me.Panel1.TabIndex = 4
         '
         'RichTextBox1
@@ -381,7 +371,7 @@ Partial Class Form1
         Me.RichTextBox1.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(693, 472)
+        Me.RichTextBox1.Size = New System.Drawing.Size(693, 497)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
@@ -397,7 +387,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(905, 543)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ideTS1)
         Me.Controls.Add(Me.ideStatStr1)
         Me.Controls.Add(Me.mainIDEStr)
         Me.MainMenuStrip = Me.mainIDEStr
@@ -417,7 +406,6 @@ Partial Class Form1
 
     Friend WithEvents mainIDEStr As MenuStrip
     Friend WithEvents ideStatStr1 As StatusStrip
-    Friend WithEvents ideTS1 As ToolStrip
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents RichTextBox1 As RichTextBox

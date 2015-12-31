@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2287BEC0-D4F6-4D90-9FB1-01B02C46CC8B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>CMI.My.MyApplication</StartupObject>
-    <RootNamespace>CMI</RootNamespace>
+    <StartupObject>CraftbyteModIDE.My.MyApplication</StartupObject>
+    <RootNamespace>CraftbyteModIDE</RootNamespace>
     <AssemblyName>Craftbyte Mod IDE</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>

@@ -25,7 +25,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Craftbyte Mod IDE - Initializing"
 
-
+        Label2.Text = ""
+        Label5.Text = ""
 
 
     End Sub
@@ -105,8 +106,7 @@ Public Class Form1
     End Sub
 
     Private Sub ProjectInformationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectInformationsToolStripMenuItem.Click
-        prjInformations.ShowDialog()
-
+        MessageBox.Show("Currently not available!", "Craftbyte Mod IDE", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
@@ -151,6 +151,10 @@ Public Class Form1
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MessageBox.Show("Craftbyte Mod IDE -- Version PREVIEW-002-0.0.0.1prealpha" & Environment.NewLine & "(C)2016 Craftbyte Developments" & Environment.NewLine & "")
+    End Sub
+
+    Private Sub ProjectSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectSettingsToolStripMenuItem.Click
 
     End Sub
 End Class

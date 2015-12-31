@@ -1,7 +1,7 @@
 ﻿Module Compiler
     Class Main
-        Function CompileFile()
+        Sub PrepareGradleCompiler()
 
-        End Function
+        End Sub
     End Class
 End Module
