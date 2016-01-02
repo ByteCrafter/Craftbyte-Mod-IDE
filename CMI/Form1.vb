@@ -59,9 +59,6 @@ Public Class Form1
 
     End Sub
 
-    Private Sub InitIDE()
-
-    End Sub
 
     Private Sub SaveFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveFileToolStripMenuItem.Click
         Dim sfd As New SaveFileDialog
@@ -130,10 +127,6 @@ Public Class Form1
         RichTextBox1.DeselectAll()
     End Sub
 
-    Private Sub SearchForToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchForToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub LoadProjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadProjectToolStripMenuItem.Click
         MessageBox.Show("This function got broken by Visual Studio, so you can currently not use this! Sorry! :(", "Function currently broken", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -145,10 +138,6 @@ Public Class Form1
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         MessageBox.Show("Craftbyte Mod IDE -- Version PREVIEW-002-0.0.0.1prealpha" & Environment.NewLine & "(C)2016 Craftbyte Developments", "About", MessageBoxButtons.OK, MessageBoxIcon.None)
-    End Sub
-
-    Private Sub ProjectSettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectSettingsToolStripMenuItem.Click
-
     End Sub
 
     Private Sub WEBSITEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WEBSITEToolStripMenuItem.Click

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 14 for Windows Desktop
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Craftbyte Mod IDE", "CMI\Craftbyte Mod IDE.vbproj", "{2287BEC0-D4F6-4D90-9FB1-01B02C46CC8B}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CraftbyteModIDE", "CMI\CraftbyteModIDE.vbproj", "{2287BEC0-D4F6-4D90-9FB1-01B02C46CC8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
