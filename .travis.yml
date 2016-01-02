@@ -1,2 +1,4 @@
 language: csharp
-solution: Craftbyte Mod IDE.sln
+solution: CraftbyteModIDE.sln
+script:
+  - xbuild /p:Configuration=Release CraftbyteModIDE.sln
