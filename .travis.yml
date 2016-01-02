@@ -1,4 +1,6 @@
 language: csharp
+mono:
+ - 4.2.1.102
 solution: CraftbyteModIDE.sln
 script:
   - xbuild /p:VbcToolExe=vbnc.exe CraftbyteModIDE.sln
