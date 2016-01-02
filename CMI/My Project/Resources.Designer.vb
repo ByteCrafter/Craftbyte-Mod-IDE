@@ -63,9 +63,29 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property code_icon_script() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("code-icon-script", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Craftbyte_Mod_IDE() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Craftbyte_Mod_IDE", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property gripimg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("gripimg", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

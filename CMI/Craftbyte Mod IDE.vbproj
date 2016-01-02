@@ -138,6 +138,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewDesignMainFrm.Designer.vb">
+      <DependentUpon>NewDesignMainFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewDesignMainFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OpenProject.Designer.vb">
       <DependentUpon>OpenProject.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,7 @@
     <Compile Include="prjInformations.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PrjOpener.vb" />
     <Compile Include="ProjectCreator.Designer.vb">
       <DependentUpon>ProjectCreator.vb</DependentUpon>
     </Compile>
@@ -198,6 +205,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewDesignMainFrm.resx">
+      <DependentUpon>NewDesignMainFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpenProject.resx">
       <DependentUpon>OpenProject.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +241,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Craftbyte-Mod-IDE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-icon-script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gripimg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

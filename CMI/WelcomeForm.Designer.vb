@@ -162,7 +162,7 @@ Partial Class WelcomeForm
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(295, 20)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "version PREVIEW-002-prealpha0.0.0.1"
+        Me.Label2.Text = "version PREVIEW-003-prealpha0.0.0.1"
         '
         'PictureBox1
         '
@@ -228,7 +228,7 @@ Partial Class WelcomeForm
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(108, 47)
         Me.Button5.TabIndex = 1
-        Me.Button5.Text = "Button5"
+        Me.Button5.Text = "coming soon"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Label5

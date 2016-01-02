@@ -43,7 +43,10 @@ Public Class Form1
 
         Label3.Text = "New file"
 
-
+        If MessageBox.Show("There is an new design available? Do you want to test it?", "New IDE design available", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Me.Hide()
+            NewDesignMainFrm.Show()
+        End If
     End Sub
 
     Private Sub OpenFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenFileToolStripMenuItem.Click
@@ -152,4 +155,12 @@ Public Class Form1
         Process.Start("http://bytecrafter.github.io/Craftbyte-Mod-IDE/")
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        If MessageBox.Show("A new design is available! Currently in Beta but stable! Do you want to try it out?", "New design available", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
+            Me.Hide()
+            NewDesignMainFrm.Show()
+        Else
+
+        End If
+    End Sub
 End Class

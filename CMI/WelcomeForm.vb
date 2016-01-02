@@ -57,4 +57,8 @@ Public Class WelcomeForm
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        MoreOptions.ShowDialog()
+    End Sub
 End Class

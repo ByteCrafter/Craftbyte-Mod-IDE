@@ -75,6 +75,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.checkTmr1 = New System.Windows.Forms.Timer(Me.components)
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.mainIDEStr.SuspendLayout()
         Me.ideStatStr1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -344,10 +345,11 @@ Partial Class Form1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(311, 17)
-        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version PREVIEW-002-0.0.0.1prealpha"
+        Me.ToolStripStatusLabel1.Text = "Craftbyte Mod IDE - Version PREVIEW-003-0.0.0.1prealpha"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -446,6 +448,16 @@ Partial Class Form1
         Me.checkTmr1.Enabled = True
         Me.checkTmr1.Interval = 10000
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(7, 481)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(198, 13)
+        Me.LinkLabel1.TabIndex = 6
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "New design available! Want to try it out?"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -523,4 +535,5 @@ Partial Class Form1
     Friend WithEvents CompileFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CompileModToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RunGradleTaskToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
