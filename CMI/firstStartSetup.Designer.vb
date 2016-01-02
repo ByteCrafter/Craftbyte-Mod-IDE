@@ -48,8 +48,7 @@ Partial Class firstStartSetup
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(385, 26)
         Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Welcome to Craftbyte Mod IDE! We need to do some things before you can fully" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "use" &
-    " the IDE."
+        Me.Label1.Text = "Welcome to Craftbyte Mod IDE! We need to do some things before you can fully" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "use" & " the IDE."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2

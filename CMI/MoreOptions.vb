@@ -15,4 +15,8 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MessageBox.Show("Currently not available yet!", "Not available yet!", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Private Sub MoreOptions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
