@@ -16,46 +16,27 @@ Public Class WelcomeForm
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         CreateProject.ShowDialog()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim ofd As New OpenFileDialog
-        With ofd
-            .Filter = "Craftbyte Project Solution (*.cps)|*.cps"
-            .InitialDirectory = "C:\Craftbyte Mod IDE\Projects\"
-            .Title = "Open a Project"
-        End With
-        If ofd.ShowDialog() = DialogResult.OK Then
-            cpsFileLoc = ofd.FileName
+        If ofd.ShowDialog = DialogResult.OK Then
             OpenProject.ShowDialog()
         End If
-
-
-
     End Sub
 
-    Private Sub WelcomeForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        If MessageBox.Show("This release is currently very broken due to an Visual Studio error. By clicking 'Yes' you acknowledge that ALL functions are currently in a very early Alpha state and that ALL features and functions might not work! This is an Preview-Prealpha release! You can't compile or make Mods currently!!", "Craftbyte Mod IDE", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes Then
-
-        Else
-            Application.Exit()
-
-        End If
-        If My.Settings.firstStart = False Then
-            Me.Hide()
-            firstStartSetup.Show()
-        Else
-
-        End If
-    End Sub
-
-    Private Sub WelcomeForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked

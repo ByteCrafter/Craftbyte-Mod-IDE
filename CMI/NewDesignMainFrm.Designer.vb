@@ -29,15 +29,6 @@ Partial Class NewDesignMainFrm
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CompileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -52,15 +43,24 @@ Partial Class NewDesignMainFrm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinecraftToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportAnBugToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -140,64 +140,6 @@ Partial Class NewDesignMainFrm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Craftbyte Mod IDE"
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.FileToolStripMenuItem1, Me.EditToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ReportAnBugToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 26)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.MenuStrip1.Size = New System.Drawing.Size(862, 24)
-        Me.MenuStrip1.TabIndex = 5
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
-        Me.FileToolStripMenuItem.Text = "Project"
-        '
-        'FileToolStripMenuItem1
-        '
-        Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
-        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem1.Text = "File"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
-        'ModToolStripMenuItem
-        '
-        Me.ModToolStripMenuItem.Name = "ModToolStripMenuItem"
-        Me.ModToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ModToolStripMenuItem.Text = "Mod"
-        '
-        'MinecraftToolStripMenuItem
-        '
-        Me.MinecraftToolStripMenuItem.Name = "MinecraftToolStripMenuItem"
-        Me.MinecraftToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.MinecraftToolStripMenuItem.Text = "Minecraft"
-        '
-        'CompileToolStripMenuItem
-        '
-        Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
-        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.CompileToolStripMenuItem.Text = "Compile"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'ReportAnBugToolStripMenuItem
-        '
-        Me.ReportAnBugToolStripMenuItem.Name = "ReportAnBugToolStripMenuItem"
-        Me.ReportAnBugToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
-        Me.ReportAnBugToolStripMenuItem.Text = "Report an Bug"
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Label3)
@@ -222,6 +164,7 @@ Partial Class NewDesignMainFrm
         'PictureBox2
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.SizeNESW
         Me.PictureBox2.Image = Global.CraftbyteModIDE.My.Resources.Resources.gripimg
         Me.PictureBox2.Location = New System.Drawing.Point(838, 45)
         Me.PictureBox2.Name = "PictureBox2"
@@ -284,7 +227,9 @@ Partial Class NewDesignMainFrm
         '
         'GroupBox2
         '
-        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Location = New System.Drawing.Point(3, 145)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(234, 144)
@@ -336,12 +281,70 @@ Partial Class NewDesignMainFrm
         '
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Font = New System.Drawing.Font("Consolas", 9.25!)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Consolas", 9.75!)
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 50)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(614, 402)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.FileToolStripMenuItem.Text = "Project"
+        '
+        'FileToolStripMenuItem1
+        '
+        Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem1.Text = "File"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'ModToolStripMenuItem
+        '
+        Me.ModToolStripMenuItem.Name = "ModToolStripMenuItem"
+        Me.ModToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ModToolStripMenuItem.Text = "Mod"
+        '
+        'MinecraftToolStripMenuItem
+        '
+        Me.MinecraftToolStripMenuItem.Name = "MinecraftToolStripMenuItem"
+        Me.MinecraftToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.MinecraftToolStripMenuItem.Text = "Minecraft"
+        '
+        'CompileToolStripMenuItem
+        '
+        Me.CompileToolStripMenuItem.Name = "CompileToolStripMenuItem"
+        Me.CompileToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.CompileToolStripMenuItem.Text = "Compile"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'ReportAnBugToolStripMenuItem
+        '
+        Me.ReportAnBugToolStripMenuItem.Name = "ReportAnBugToolStripMenuItem"
+        Me.ReportAnBugToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.ReportAnBugToolStripMenuItem.Text = "Report an Bug"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.FileToolStripMenuItem1, Me.EditToolStripMenuItem, Me.ModToolStripMenuItem, Me.MinecraftToolStripMenuItem, Me.CompileToolStripMenuItem, Me.HelpToolStripMenuItem, Me.ReportAnBugToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 26)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.MenuStrip1.Size = New System.Drawing.Size(862, 24)
+        Me.MenuStrip1.TabIndex = 5
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'NewDesignMainFrm
         '
@@ -362,8 +365,6 @@ Partial Class NewDesignMainFrm
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -371,6 +372,8 @@ Partial Class NewDesignMainFrm
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -381,16 +384,7 @@ Partial Class NewDesignMainFrm
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FileToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ModToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MinecraftToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CompileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportAnBugToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents RichTextBox1 As RichTextBox
@@ -406,4 +400,13 @@ Partial Class NewDesignMainFrm
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ReportAnBugToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MinecraftToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FileToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
 End Class

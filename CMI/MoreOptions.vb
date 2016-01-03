@@ -12,7 +12,7 @@
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) 
         MessageBox.Show("Currently not available yet!", "Not available yet!", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
