@@ -1,0 +1,4 @@
+language: csharp
+mono:
+ - latest
+solution: CraftbyteModIDE.sln
