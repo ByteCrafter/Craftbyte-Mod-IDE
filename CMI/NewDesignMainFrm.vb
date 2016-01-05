@@ -11,20 +11,20 @@
     End Sub
 
     Private Sub PictureBox2_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseDown
-        If e.Button = Windows.Forms.MouseButtons.Left Then 'If the control is being left-clicked
-            GripDrag = True 'Confirms the grip is ready to be dragged
-            InitialSizeX = Me.Width 'Sets the initial width
-            InitialSizeY = Me.Height 'Sets the initial height
+        If e.Button = Windows.Forms.MouseButtons.Left Then '
+            GripDrag = True
+            InitialSizeX = Me.Width
+            InitialSizeY = Me.Height
         End If
     End Sub
 
     Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
         If GripDrag = True Then
-            Me.Width = InitialSizeX + (Windows.Forms.Cursor.Position.X - (Me.Width + Me.Location.X)) 'Increases the width of the form by the amount the grip has been dragged towards the right
-            Me.Height = InitialSizeY + (Windows.Forms.Cursor.Position.Y - (Me.Height + Me.Location.Y)) 'Increases the height of the form by the amount the grip has been dragged downward
+            Me.Width = InitialSizeX + (Windows.Forms.Cursor.Position.X - (Me.Width + Me.Location.X))
+            Me.Height = InitialSizeY + (Windows.Forms.Cursor.Position.Y - (Me.Height + Me.Location.Y)) '
 
-            InitialSizeX = Me.Width 'Resets the value to the form's current width
-            InitialSizeY = Me.Height 'Resets the value to the form's current height
+            InitialSizeX = Me.Width
+            InitialSizeY = Me.Height
 
             Me.Refresh()
         End If
@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub PictureBox2_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseUp
-        GripDrag = False 'Confirms the grip is no longer being dragged
+        GripDrag = False
 
     End Sub
 
@@ -52,5 +52,9 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Application.Exit()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
     End Sub
 End Class
